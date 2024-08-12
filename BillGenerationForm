@@ -1,0 +1,120 @@
+package ElectricityBillingSystem;
+
+import java.awt.EventQueue;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+import javax.swing.JButton;
+import javax.swing.JFrame;
+import javax.swing.JLabel;
+import javax.swing.JPanel;
+import javax.swing.JTextField;
+import javax.swing.border.EmptyBorder;
+import java.awt.Color;
+import javax.swing.JTextArea;
+import java.awt.Font;
+
+public class BillGenerationForm extends JFrame {
+
+	private static final long serialVersionUID = 1L;
+	private JLabel lblCustomerId, lblCustomerName, lblAddress;
+    private JLabel lblMeterNumber;
+    private JLabel lblDate;
+    private JLabel lblUsage;
+    private JLabel lblCostPerUnit;
+    private JLabel lblTotal;
+    private JLabel lblNewLabel_1;
+    private JLabel lblNewLabel_2;
+    private JLabel lblNewLabel_3;
+    private JLabel lblNewLabel_4;
+
+
+	/**
+	 * Launch the application.
+	 */
+	public static void main(String[] args) {
+		EventQueue.invokeLater(new Runnable() {
+			public void run() {
+				try {
+					BillGenerationForm frame = new BillGenerationForm("","","","","","","","");
+					frame.setVisible(true);
+				} catch (Exception e) {
+					e.printStackTrace();
+				}
+			}
+		});
+	}
+
+	/**
+	 * Create the frame.
+	 */
+	public BillGenerationForm(String customerId, String customerName, String address, String meterNumber, String date, String usage, String costPerUnit, String total) {
+		setTitle("Receipt");
+		getContentPane().setBackground(new Color(255, 255, 255));
+		getContentPane().setLayout(null);
+		getContentPane().setLayout(null);
+		
+		JLabel lblNewLabel = new JLabel("*** BILL RECEIPT ***");
+		lblNewLabel.setFont(new Font("Segoe UI", Font.BOLD, 23));
+		lblNewLabel.setBounds(294, 54, 251, 49);
+		getContentPane().add(lblNewLabel);
+		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		setBounds(100, 100, 815, 629);
+		
+		lblCustomerId = new JLabel("Customer ID:\t"+ customerId);
+        lblCustomerId.setFont(new Font("Segoe UI", Font.BOLD, 14));
+        lblCustomerId.setBounds(138, 144, 562, 31);
+        getContentPane().add(lblCustomerId);
+
+        lblCustomerName = new JLabel("Customer Name:\t"+ customerName);
+        lblCustomerName.setFont(new Font("Segoe UI", Font.BOLD, 14));
+        lblCustomerName.setBounds(138, 186, 562, 31);
+        getContentPane().add(lblCustomerName);
+        
+        lblAddress = new JLabel("Address: \t\t"+ address);
+        lblAddress.setFont(new Font("Segoe UI", Font.BOLD, 14));
+        lblAddress.setBounds(138, 228, 568, 31);
+        getContentPane().add(lblAddress);
+        
+        lblMeterNumber = new JLabel("Meter Number:\t\t"+ meterNumber);
+        lblMeterNumber.setFont(new Font("Segoe UI", Font.BOLD, 14));
+        lblMeterNumber.setBounds(138, 270, 568, 31);
+        getContentPane().add(lblMeterNumber);
+        
+        lblDate = new JLabel("Date:\t\t"+ date);
+        lblDate.setFont(new Font("Segoe UI", Font.BOLD, 14));
+        lblDate.setBounds(138, 301, 568, 31);
+        getContentPane().add(lblDate);
+        
+        lblUsage = new JLabel("Usage: \t\t "+ usage);
+        lblUsage.setFont(new Font("Segoe UI", Font.BOLD, 14));
+        lblUsage.setBounds(138, 335, 562, 31);
+        getContentPane().add(lblUsage);
+        
+        lblCostPerUnit = new JLabel("Cost per Unit: \t" + costPerUnit);
+        lblCostPerUnit.setFont(new Font("Segoe UI", Font.BOLD, 14));
+        lblCostPerUnit.setBounds(138, 366, 562, 31);
+        getContentPane().add(lblCostPerUnit);
+        
+        lblTotal = new JLabel("TOTAL ($): \t\t"+ total);
+        lblTotal.setFont(new Font("Segoe UI", Font.BOLD, 23));
+        lblTotal.setBounds(138, 449, 562, 49);
+        getContentPane().add(lblTotal);
+        
+        lblNewLabel_1 = new JLabel("--------------------------------------------------------------------------------------------------------------------------------------------------------");
+        lblNewLabel_1.setBounds(102, 509, 623, 14);
+        getContentPane().add(lblNewLabel_1);
+        
+        lblNewLabel_2 = new JLabel("--------------------------------------------------------------------------------------------------------------------------------------------------------");
+        lblNewLabel_2.setBounds(102, 428, 623, 14);
+        getContentPane().add(lblNewLabel_2);
+        
+        lblNewLabel_3 = new JLabel("--------------------------------------------------------------------------------------------------------------------------------------------------------");
+        lblNewLabel_3.setBounds(83, 102, 623, 14);
+        getContentPane().add(lblNewLabel_3);
+        
+        lblNewLabel_4 = new JLabel("--------------------------------------------------------------------------------------------------------------------------------------------------------");
+        lblNewLabel_4.setBounds(83, 39, 623, 14);
+        getContentPane().add(lblNewLabel_4);
+
+	}
+}
