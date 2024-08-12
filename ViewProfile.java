@@ -47,10 +47,12 @@ public class ViewProfile extends JFrame {
      * Create the frame.
      */
     public ViewProfile(String username) {
+    	setTitle("View Profile");
     	this.username = username;
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         setBounds(100, 100, 500, 400);
         contentPane = new JPanel();
+        contentPane.setBackground(new Color(255, 255, 255));
         contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
         setContentPane(contentPane);
         contentPane.setLayout(null);
